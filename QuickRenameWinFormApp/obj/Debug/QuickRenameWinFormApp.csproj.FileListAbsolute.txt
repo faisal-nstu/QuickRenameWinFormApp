@@ -1,0 +1,9 @@
+E:\Faisal\C#\QuickRenameWinFormApp\QuickRenameWinFormApp\bin\Debug\QuickRenameWinFormApp.exe.config
+E:\Faisal\C#\QuickRenameWinFormApp\QuickRenameWinFormApp\bin\Debug\QuickRenameWinFormApp.exe
+E:\Faisal\C#\QuickRenameWinFormApp\QuickRenameWinFormApp\bin\Debug\QuickRenameWinFormApp.pdb
+E:\Faisal\C#\QuickRenameWinFormApp\QuickRenameWinFormApp\obj\Debug\QuickRenameWinFormApp.Properties.Resources.resources
+E:\Faisal\C#\QuickRenameWinFormApp\QuickRenameWinFormApp\obj\Debug\QuickRenameWinFormApp.csproj.GenerateResource.Cache
+E:\Faisal\C#\QuickRenameWinFormApp\QuickRenameWinFormApp\obj\Debug\QuickRenameWinFormApp.exe
+E:\Faisal\C#\QuickRenameWinFormApp\QuickRenameWinFormApp\obj\Debug\QuickRenameWinFormApp.pdb
+E:\Faisal\C#\QuickRenameWinFormApp\QuickRenameWinFormApp\obj\Debug\QuickRenameWinFormApp.csprojResolveAssemblyReference.cache
+E:\Faisal\C#\QuickRenameWinFormApp\QuickRenameWinFormApp\obj\Debug\QuickRenameWinFormApp.UI.MainForm.resources
