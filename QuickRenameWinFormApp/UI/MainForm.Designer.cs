@@ -39,11 +39,14 @@
             this.renameButton = new System.Windows.Forms.Button();
             this.newNameTextBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.SuspendLayout();
             // 
             // successLabel
             // 
             this.successLabel.AutoSize = true;
+            this.successLabel.BackColor = System.Drawing.SystemColors.Control;
+            this.successLabel.ForeColor = System.Drawing.SystemColors.ControlText;
             this.successLabel.Location = new System.Drawing.Point(63, 264);
             this.successLabel.Name = "successLabel";
             this.successLabel.Size = new System.Drawing.Size(89, 13);
@@ -67,7 +70,7 @@
             // renameRadioButton
             // 
             this.renameRadioButton.AutoSize = true;
-            this.renameRadioButton.Location = new System.Drawing.Point(63, 111);
+            this.renameRadioButton.Location = new System.Drawing.Point(71, 111);
             this.renameRadioButton.Name = "renameRadioButton";
             this.renameRadioButton.Size = new System.Drawing.Size(65, 17);
             this.renameRadioButton.TabIndex = 11;
@@ -87,7 +90,7 @@
             // changeExtensionRadioButton
             // 
             this.changeExtensionRadioButton.AutoSize = true;
-            this.changeExtensionRadioButton.Location = new System.Drawing.Point(63, 147);
+            this.changeExtensionRadioButton.Location = new System.Drawing.Point(71, 147);
             this.changeExtensionRadioButton.Name = "changeExtensionRadioButton";
             this.changeExtensionRadioButton.Size = new System.Drawing.Size(111, 17);
             this.changeExtensionRadioButton.TabIndex = 7;
@@ -97,12 +100,13 @@
             // appendRadioButton
             // 
             this.appendRadioButton.AutoSize = true;
-            this.appendRadioButton.Location = new System.Drawing.Point(289, 111);
+            this.appendRadioButton.BackColor = System.Drawing.SystemColors.Control;
+            this.appendRadioButton.Location = new System.Drawing.Point(287, 111);
             this.appendRadioButton.Name = "appendRadioButton";
             this.appendRadioButton.Size = new System.Drawing.Size(62, 17);
             this.appendRadioButton.TabIndex = 8;
             this.appendRadioButton.Text = "Append";
-            this.appendRadioButton.UseVisualStyleBackColor = true;
+            this.appendRadioButton.UseVisualStyleBackColor = false;
             // 
             // renameButton
             // 
@@ -131,10 +135,20 @@
             this.label1.TabIndex = 14;
             this.label1.Text = "© 2014, Nobody";
             // 
+            // groupBox1
+            // 
+            this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.groupBox1.Location = new System.Drawing.Point(63, 99);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(288, 74);
+            this.groupBox1.TabIndex = 15;
+            this.groupBox1.TabStop = false;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::QuickRenameWinFormApp.Properties.Resources.video_overlay;
             this.ClientSize = new System.Drawing.Size(415, 328);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.successLabel);
@@ -145,6 +159,7 @@
             this.Controls.Add(this.appendRadioButton);
             this.Controls.Add(this.renameButton);
             this.Controls.Add(this.newNameTextBox);
+            this.Controls.Add(this.groupBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "MainForm";
@@ -166,6 +181,7 @@
         private System.Windows.Forms.Button renameButton;
         private System.Windows.Forms.TextBox newNameTextBox;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }
 
