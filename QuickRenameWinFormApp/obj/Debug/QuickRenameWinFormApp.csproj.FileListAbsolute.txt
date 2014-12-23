@@ -7,3 +7,12 @@ E:\Faisal\C#\QuickRenameWinFormApp\QuickRenameWinFormApp\obj\Debug\QuickRenameWi
 E:\Faisal\C#\QuickRenameWinFormApp\QuickRenameWinFormApp\obj\Debug\QuickRenameWinFormApp.pdb
 E:\Faisal\C#\QuickRenameWinFormApp\QuickRenameWinFormApp\obj\Debug\QuickRenameWinFormApp.csprojResolveAssemblyReference.cache
 E:\Faisal\C#\QuickRenameWinFormApp\QuickRenameWinFormApp\obj\Debug\QuickRenameWinFormApp.UI.MainForm.resources
+D:\Work\C# Projects\QuickRenameWinFormApp\QuickRenameWinFormApp\bin\Debug\QuickRenameWinFormApp.exe.config
+D:\Work\C# Projects\QuickRenameWinFormApp\QuickRenameWinFormApp\bin\Debug\QuickRenameWinFormApp.exe
+D:\Work\C# Projects\QuickRenameWinFormApp\QuickRenameWinFormApp\bin\Debug\QuickRenameWinFormApp.pdb
+D:\Work\C# Projects\QuickRenameWinFormApp\QuickRenameWinFormApp\obj\Debug\QuickRenameWinFormApp.csprojResolveAssemblyReference.cache
+D:\Work\C# Projects\QuickRenameWinFormApp\QuickRenameWinFormApp\obj\Debug\QuickRenameWinFormApp.Properties.Resources.resources
+D:\Work\C# Projects\QuickRenameWinFormApp\QuickRenameWinFormApp\obj\Debug\QuickRenameWinFormApp.UI.MainForm.resources
+D:\Work\C# Projects\QuickRenameWinFormApp\QuickRenameWinFormApp\obj\Debug\QuickRenameWinFormApp.csproj.GenerateResource.Cache
+D:\Work\C# Projects\QuickRenameWinFormApp\QuickRenameWinFormApp\obj\Debug\QuickRenameWinFormApp.exe
+D:\Work\C# Projects\QuickRenameWinFormApp\QuickRenameWinFormApp\obj\Debug\QuickRenameWinFormApp.pdb

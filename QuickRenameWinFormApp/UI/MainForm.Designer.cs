@@ -137,11 +137,12 @@
             // newNameTextBox
             // 
             this.newNameTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.newNameTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.newNameTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.newNameTextBox.ForeColor = System.Drawing.Color.White;
             this.newNameTextBox.Location = new System.Drawing.Point(63, 183);
+            this.newNameTextBox.MinimumSize = new System.Drawing.Size(0, 23);
             this.newNameTextBox.Name = "newNameTextBox";
-            this.newNameTextBox.Size = new System.Drawing.Size(288, 13);
+            this.newNameTextBox.Size = new System.Drawing.Size(288, 23);
             this.newNameTextBox.TabIndex = 5;
             // 
             // label1
