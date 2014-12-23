@@ -15,7 +15,7 @@ namespace QuickRenameWinFormApp.UI
         public MainForm()
         {
             InitializeComponent();
-            this.ForeColor = Color.FromArgb(54, 54, 54);
+            this.ForeColor = Color.FromArgb(251, 251, 251);
             openFileDialogcontrol.Multiselect = true;
             successLabel.Text = "Name Changed Successfully";
             successLabel.Hide();
@@ -31,7 +31,7 @@ namespace QuickRenameWinFormApp.UI
         private void NewNameTextBoxOnGotFocus(object sender, EventArgs eventArgs)
         {
             newNameTextBox.Text = "";
-            newNameTextBox.ForeColor = DefaultForeColor;
+            newNameTextBox.ForeColor = Color.White;
         }
 
         private void ChangeExtensionRadioButtonOnCheckedChanged(object sender, EventArgs eventArgs)
