@@ -1,1 +1,0 @@
-http://www.codeproject.com/Articles/44914/Select-file-or-folder-from-the-same-dialog
