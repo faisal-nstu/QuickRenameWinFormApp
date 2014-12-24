@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
+using dnGREP;
 using QuickRenameWinFormApp.BL;
 
 namespace QuickRenameWinFormApp.UI
@@ -11,12 +12,13 @@ namespace QuickRenameWinFormApp.UI
         public List<string> SelectedFileNames;
         private string _newFileName;
         private int _successMessageTimer;
+        private OpenFileDialog fileDialog = new OpenFileDialog();
 
         public MainForm()
         {
             InitializeComponent();
             this.ForeColor = Color.FromArgb(251, 251, 251);
-            openFileDialogcontrol.Multiselect = true;
+            fileDialog.Multiselect = true;
             successLabel.Text = "Name Changed Successfully";
             successLabel.Hide();
             renameButton.Enabled = false;
@@ -96,11 +98,11 @@ namespace QuickRenameWinFormApp.UI
 
         private void selectFileButton_Click(object sender, EventArgs e)
         {
-            DialogResult result = openFileDialogcontrol.ShowDialog();
+            DialogResult result = fileDialog.ShowDialog();
             SelectedFileNames = new List<string>();
             if (result == DialogResult.OK)
             {
-                foreach (string fileName in openFileDialogcontrol.FileNames)
+                foreach (string fileName in fileDialog.FileNames)
                 {
                     SelectedFileNames.Add(fileName);
                     renameButton.Enabled = true;
@@ -128,5 +130,8 @@ namespace QuickRenameWinFormApp.UI
                 successLabel.Hide();
             }
         }
+
+        
+
     }
 }

@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.successLabel = new System.Windows.Forms.Label();
             this.selectFileButton = new System.Windows.Forms.Button();
-            this.openFileDialogcontrol = new System.Windows.Forms.OpenFileDialog();
             this.renameRadioButton = new System.Windows.Forms.RadioButton();
             this.prependRadioButton = new System.Windows.Forms.RadioButton();
             this.changeExtensionRadioButton = new System.Windows.Forms.RadioButton();
@@ -66,10 +65,6 @@
             this.selectFileButton.Text = "<<< Select File >>>";
             this.selectFileButton.UseVisualStyleBackColor = false;
             this.selectFileButton.Click += new System.EventHandler(this.selectFileButton_Click);
-            // 
-            // openFileDialogcontrol
-            // 
-            this.openFileDialogcontrol.FileName = "openFileDialog1";
             // 
             // renameRadioButton
             // 
@@ -140,9 +135,9 @@
             this.newNameTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.newNameTextBox.ForeColor = System.Drawing.Color.White;
             this.newNameTextBox.Location = new System.Drawing.Point(63, 183);
-            this.newNameTextBox.MinimumSize = new System.Drawing.Size(0, 23);
+            this.newNameTextBox.MinimumSize = new System.Drawing.Size(2, 23);
             this.newNameTextBox.Name = "newNameTextBox";
-            this.newNameTextBox.Size = new System.Drawing.Size(288, 23);
+            this.newNameTextBox.Size = new System.Drawing.Size(288, 20);
             this.newNameTextBox.TabIndex = 5;
             // 
             // label1
@@ -189,7 +184,6 @@
 
         private System.Windows.Forms.Label successLabel;
         private System.Windows.Forms.Button selectFileButton;
-        private System.Windows.Forms.OpenFileDialog openFileDialogcontrol;
         private System.Windows.Forms.RadioButton renameRadioButton;
         private System.Windows.Forms.RadioButton prependRadioButton;
         private System.Windows.Forms.RadioButton changeExtensionRadioButton;
