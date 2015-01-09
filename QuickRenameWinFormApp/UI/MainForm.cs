@@ -12,6 +12,7 @@ namespace QuickRenameWinFormApp.UI
         private string _newFileName;
         private int _successMessageTimer;
         private OpenFileDialog fileDialog = new OpenFileDialog();
+        private bool _isReplaceOkClicked = false;
         
 
         public MainForm()
@@ -31,7 +32,15 @@ namespace QuickRenameWinFormApp.UI
             prependRadioButton.CheckedChanged += PrependRadioButtonOnCheckedChanged;
             changeExtensionRadioButton.CheckedChanged += ChangeExtensionRadioButtonOnCheckedChanged;
             newNameTextBox.GotFocus += NewNameTextBoxOnGotFocus;
+            replaceableTextbox.GotFocus += ReplaceableTextboxOnGotFocus;
             renameRadioButton.Checked = true;
+            replaceableTextbox.Visible = false;
+        }
+
+        private void ReplaceableTextboxOnGotFocus(object sender, EventArgs eventArgs)
+        {
+            replaceableTextbox.Text = "";
+            replaceableTextbox.ForeColor = Color.White;
         }
 
         private void NewNameTextBoxOnGotFocus(object sender, EventArgs eventArgs)
@@ -44,7 +53,7 @@ namespace QuickRenameWinFormApp.UI
         {
             if (changeExtensionRadioButton.Checked)
             {
-                newNameTextBox.Text = "Enter New File Extension";
+                newNameTextBox.Text = "Enter New File Extension...";
                 newNameTextBox.ForeColor = Color.Silver;
             }
         }
@@ -53,7 +62,7 @@ namespace QuickRenameWinFormApp.UI
         {
             if (prependRadioButton.Checked)
             {
-                newNameTextBox.Text = "Enter Text to Prepend";
+                newNameTextBox.Text = "Enter Text to Prepend...";
                 newNameTextBox.ForeColor = Color.Silver;
             }
         }
@@ -62,7 +71,7 @@ namespace QuickRenameWinFormApp.UI
         {
             if (appendRadioButton.Checked)
             {
-                newNameTextBox.Text = "Enter Text to Append";
+                newNameTextBox.Text = "Enter Text to Append...";
                 newNameTextBox.ForeColor = Color.Silver;
             }
         }
@@ -71,9 +80,40 @@ namespace QuickRenameWinFormApp.UI
         {
             if (renameRadioButton.Checked)
             {
-                newNameTextBox.Text = "Enter New Name";
+                newNameTextBox.Text = "Enter New Name...";
                 newNameTextBox.ForeColor = Color.Silver;
             }
+        }
+
+        private void replaceRadioButton_CheckedChanged(object sender, EventArgs e)
+        {
+            if (replaceRadioButton.Checked == true && _isReplaceOkClicked == false)
+            {
+                replaceableTextbox.Visible = true;
+                replaceableTextbox.Text = "Enter Text to Replace with...";
+                replaceableTextbox.ForeColor = Color.Silver;
+                newNameTextBox.Text = "Enter Text to be Replaced...";
+                newNameTextBox.ForeColor = Color.Silver;
+                for (int i = 0; i < (264 - 222); i++)
+                {
+                    renameButton.Location = new Point(renameButton.Location.X, renameButton.Location.Y + 1);
+                    successLabel.Location = new Point(successLabel.Location.X, successLabel.Location.Y + 1);
+                    this.Height++;
+                }
+                _isReplaceOkClicked = true;
+            }
+            else if (replaceRadioButton.Checked == false && _isReplaceOkClicked == true)
+            {
+                replaceableTextbox.Visible = false;
+                for (int i = 0; i < (264 - 222); i++)
+                {
+                    renameButton.Location = new Point(renameButton.Location.X, renameButton.Location.Y - 1);
+                    successLabel.Location = new Point(successLabel.Location.X, successLabel.Location.Y - 1);
+                    this.Height--;
+                }
+                _isReplaceOkClicked = false;
+            }
+
         }
 
         private void renameButton_Click(object sender, EventArgs e)
@@ -95,8 +135,13 @@ namespace QuickRenameWinFormApp.UI
             {
                 RenamingTasks.ChangeExtension(SelectedFileNames, newName);
             }
+            else if (replaceRadioButton.Checked)
+            {
+                RenamingTasks.Replace(SelectedFileNames, newNameTextBox.Text, replaceableTextbox.Text);
+            }
             SelectedFileNames = null;
             newNameTextBox.Text = "";
+            replaceableTextbox.Text = "";
             SuccessMessage();
         }
 

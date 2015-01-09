@@ -38,6 +38,8 @@
             this.renameButton = new System.Windows.Forms.Button();
             this.newNameTextBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.replaceRadioButton = new System.Windows.Forms.RadioButton();
+            this.replaceableTextbox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // successLabel
@@ -152,6 +154,30 @@
             this.label1.TabIndex = 14;
             this.label1.Text = "© 2014, Nobody";
             // 
+            // replaceRadioButton
+            // 
+            this.replaceRadioButton.AutoSize = true;
+            this.replaceRadioButton.BackColor = System.Drawing.Color.Transparent;
+            this.replaceRadioButton.ForeColor = System.Drawing.Color.White;
+            this.replaceRadioButton.Location = new System.Drawing.Point(198, 147);
+            this.replaceRadioButton.Name = "replaceRadioButton";
+            this.replaceRadioButton.Size = new System.Drawing.Size(65, 17);
+            this.replaceRadioButton.TabIndex = 4;
+            this.replaceRadioButton.Text = "Replace";
+            this.replaceRadioButton.UseVisualStyleBackColor = false;
+            this.replaceRadioButton.CheckedChanged += new System.EventHandler(this.replaceRadioButton_CheckedChanged);
+            // 
+            // replaceableTextbox
+            // 
+            this.replaceableTextbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.replaceableTextbox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.replaceableTextbox.ForeColor = System.Drawing.Color.White;
+            this.replaceableTextbox.Location = new System.Drawing.Point(63, 222);
+            this.replaceableTextbox.MinimumSize = new System.Drawing.Size(2, 23);
+            this.replaceableTextbox.Name = "replaceableTextbox";
+            this.replaceableTextbox.Size = new System.Drawing.Size(288, 23);
+            this.replaceableTextbox.TabIndex = 5;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -164,10 +190,12 @@
             this.Controls.Add(this.selectFileButton);
             this.Controls.Add(this.renameRadioButton);
             this.Controls.Add(this.prependRadioButton);
+            this.Controls.Add(this.replaceRadioButton);
             this.Controls.Add(this.changeExtensionRadioButton);
             this.Controls.Add(this.appendRadioButton);
-            this.Controls.Add(this.renameButton);
             this.Controls.Add(this.newNameTextBox);
+            this.Controls.Add(this.renameButton);
+            this.Controls.Add(this.replaceableTextbox);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
@@ -191,6 +219,8 @@
         private System.Windows.Forms.Button renameButton;
         private System.Windows.Forms.TextBox newNameTextBox;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.RadioButton replaceRadioButton;
+        private System.Windows.Forms.TextBox replaceableTextbox;
     }
 }
 

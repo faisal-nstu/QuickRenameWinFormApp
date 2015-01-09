@@ -66,5 +66,15 @@ namespace QuickRenameWinFormApp.BL
                 System.IO.File.Move(file, System.IO.Path.ChangeExtension(file, ("." + newExtension)));
             }
         }
+
+        public static void Replace(List<string> fileList,string replaceableText ,string replacer)
+        {
+            string _newFileName;
+            foreach (var file in fileList)
+            {
+                _newFileName = file.Replace(replaceableText, replacer);
+                System.IO.File.Move(file, _newFileName);
+            }
+        }
     }
 }
