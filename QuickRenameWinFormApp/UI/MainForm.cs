@@ -43,7 +43,7 @@ namespace QuickRenameWinFormApp.UI
 
         private void TextBoxLostFocus(object sender, EventArgs eventArgs)
         {
-            replaceableTextbox.KeyPress -= CheckForIllegalCharacters;
+            (sender as TextBox).KeyPress -= CheckForIllegalCharacters;
         }
 
 
