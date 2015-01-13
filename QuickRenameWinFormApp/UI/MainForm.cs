@@ -35,22 +35,46 @@ namespace QuickRenameWinFormApp.UI
             removeNumbersRadioButton.CheckedChanged += RemoveNumbersRadioButtonOnCheckedChanged;
             newNameTextBox.GotFocus += NewNameTextBoxOnGotFocus;
             replaceableTextbox.GotFocus += ReplaceableTextboxOnGotFocus;
+            newNameTextBox.LostFocus += TextBoxLostFocus;
+            replaceableTextbox.LostFocus += TextBoxLostFocus;
             renameRadioButton.Checked = true;
             replaceableTextbox.Visible = false;
         }
 
-        
+        private void TextBoxLostFocus(object sender, EventArgs eventArgs)
+        {
+            replaceableTextbox.KeyPress -= CheckForIllegalCharacters;
+        }
 
+
+        // \ / : * ? " < > | 
         private void ReplaceableTextboxOnGotFocus(object sender, EventArgs eventArgs)
         {
             replaceableTextbox.Text = "";
             replaceableTextbox.ForeColor = Color.White;
+            replaceableTextbox.KeyPress += CheckForIllegalCharacters;
+        }
+
+        private void CheckForIllegalCharacters(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == '\\' || 
+                e.KeyChar == '/' || 
+                e.KeyChar == ':' || 
+                e.KeyChar == '*' || 
+                e.KeyChar == '?' || 
+                e.KeyChar == '"' ||
+                e.KeyChar == '<' ||
+                e.KeyChar == '>' ||
+                e.KeyChar == '|' ) 
+                // (keyPressEventArgs.KeyChar == (char)Keys.Back))
+                e.Handled = true;
         }
 
         private void NewNameTextBoxOnGotFocus(object sender, EventArgs eventArgs)
         {
             newNameTextBox.Text = "";
             newNameTextBox.ForeColor = Color.White;
+            newNameTextBox.KeyPress += CheckForIllegalCharacters;
         }
 
         private void ChangeExtensionRadioButtonOnCheckedChanged(object sender, EventArgs eventArgs)
