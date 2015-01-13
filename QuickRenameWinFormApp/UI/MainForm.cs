@@ -31,11 +31,15 @@ namespace QuickRenameWinFormApp.UI
             appendRadioButton.CheckedChanged += AppendRadioButtonOnCheckedChanged;
             prependRadioButton.CheckedChanged += PrependRadioButtonOnCheckedChanged;
             changeExtensionRadioButton.CheckedChanged += ChangeExtensionRadioButtonOnCheckedChanged;
+            replaceRadioButton.CheckedChanged += replaceRadioButton_CheckedChanged;
+            removeNumbersRadioButton.CheckedChanged += RemoveNumbersRadioButtonOnCheckedChanged;
             newNameTextBox.GotFocus += NewNameTextBoxOnGotFocus;
             replaceableTextbox.GotFocus += ReplaceableTextboxOnGotFocus;
             renameRadioButton.Checked = true;
             replaceableTextbox.Visible = false;
         }
+
+        
 
         private void ReplaceableTextboxOnGotFocus(object sender, EventArgs eventArgs)
         {
@@ -116,6 +120,26 @@ namespace QuickRenameWinFormApp.UI
 
         }
 
+        private void RemoveNumbersRadioButtonOnCheckedChanged(object sender, EventArgs eventArgs)
+        {
+            if (removeNumbersRadioButton.Checked)
+            {
+                newNameTextBox.Text = "Enter number of digits to remove...";
+                newNameTextBox.ForeColor = Color.Silver;
+                newNameTextBox.KeyPress += TextboxOnKeyPress;
+            }
+            else
+            {
+                newNameTextBox.KeyPress -= TextboxOnKeyPress;
+            }
+        }
+
+        private void TextboxOnKeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!(Char.IsDigit(e.KeyChar) || (e.KeyChar == (char)Keys.Back)))
+                e.Handled = true;
+        }
+
         private void renameButton_Click(object sender, EventArgs e)
         {
             var newName = newNameTextBox.Text;
@@ -138,6 +162,10 @@ namespace QuickRenameWinFormApp.UI
             else if (replaceRadioButton.Checked)
             {
                 RenamingTasks.Replace(SelectedFileNames, newNameTextBox.Text, replaceableTextbox.Text);
+            }
+            else if (removeNumbersRadioButton.Checked)
+            {
+                RenamingTasks.RemoveNumbers(SelectedFileNames,newNameTextBox.Text);
             }
             SelectedFileNames = null;
             newNameTextBox.Text = "";

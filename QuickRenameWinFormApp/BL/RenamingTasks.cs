@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -73,6 +74,19 @@ namespace QuickRenameWinFormApp.BL
             foreach (var file in fileList)
             {
                 _newFileName = file.Replace(replaceableText, replacer);
+                System.IO.File.Move(file, _newFileName);
+            }
+        }
+
+        public static void RemoveNumbers(List<string> fileList, string noOfDigitsToRemove)
+        {
+            string _newFileName;
+            foreach (var file in fileList)
+            {
+                var fileName = Path.GetFileNameWithoutExtension(file);
+                var aStringBuilder = new StringBuilder(fileName);
+                aStringBuilder.Remove(0,Convert.ToInt32(noOfDigitsToRemove));
+                _newFileName = file.Replace(fileName, aStringBuilder.ToString());
                 System.IO.File.Move(file, _newFileName);
             }
         }

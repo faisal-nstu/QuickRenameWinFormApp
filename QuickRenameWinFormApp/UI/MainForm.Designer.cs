@@ -40,6 +40,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.replaceRadioButton = new System.Windows.Forms.RadioButton();
             this.replaceableTextbox = new System.Windows.Forms.TextBox();
+            this.removeNumbersRadioButton = new System.Windows.Forms.RadioButton();
             this.SuspendLayout();
             // 
             // successLabel
@@ -60,7 +61,7 @@
             this.selectFileButton.FlatAppearance.BorderSize = 0;
             this.selectFileButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.selectFileButton.ForeColor = System.Drawing.Color.White;
-            this.selectFileButton.Location = new System.Drawing.Point(63, 69);
+            this.selectFileButton.Location = new System.Drawing.Point(63, 41);
             this.selectFileButton.Name = "selectFileButton";
             this.selectFileButton.Size = new System.Drawing.Size(288, 23);
             this.selectFileButton.TabIndex = 0;
@@ -73,7 +74,7 @@
             this.renameRadioButton.AutoSize = true;
             this.renameRadioButton.BackColor = System.Drawing.Color.Transparent;
             this.renameRadioButton.ForeColor = System.Drawing.Color.White;
-            this.renameRadioButton.Location = new System.Drawing.Point(71, 111);
+            this.renameRadioButton.Location = new System.Drawing.Point(71, 83);
             this.renameRadioButton.Name = "renameRadioButton";
             this.renameRadioButton.Size = new System.Drawing.Size(65, 17);
             this.renameRadioButton.TabIndex = 1;
@@ -85,7 +86,7 @@
             this.prependRadioButton.AutoSize = true;
             this.prependRadioButton.BackColor = System.Drawing.Color.Transparent;
             this.prependRadioButton.ForeColor = System.Drawing.Color.White;
-            this.prependRadioButton.Location = new System.Drawing.Point(176, 111);
+            this.prependRadioButton.Location = new System.Drawing.Point(176, 83);
             this.prependRadioButton.Name = "prependRadioButton";
             this.prependRadioButton.Size = new System.Drawing.Size(65, 17);
             this.prependRadioButton.TabIndex = 2;
@@ -97,7 +98,7 @@
             this.changeExtensionRadioButton.AutoSize = true;
             this.changeExtensionRadioButton.BackColor = System.Drawing.Color.Transparent;
             this.changeExtensionRadioButton.ForeColor = System.Drawing.Color.White;
-            this.changeExtensionRadioButton.Location = new System.Drawing.Point(71, 147);
+            this.changeExtensionRadioButton.Location = new System.Drawing.Point(71, 119);
             this.changeExtensionRadioButton.Name = "changeExtensionRadioButton";
             this.changeExtensionRadioButton.Size = new System.Drawing.Size(111, 17);
             this.changeExtensionRadioButton.TabIndex = 4;
@@ -109,7 +110,7 @@
             this.appendRadioButton.AutoSize = true;
             this.appendRadioButton.BackColor = System.Drawing.Color.Transparent;
             this.appendRadioButton.ForeColor = System.Drawing.Color.White;
-            this.appendRadioButton.Location = new System.Drawing.Point(287, 111);
+            this.appendRadioButton.Location = new System.Drawing.Point(287, 83);
             this.appendRadioButton.Name = "appendRadioButton";
             this.appendRadioButton.Size = new System.Drawing.Size(62, 17);
             this.appendRadioButton.TabIndex = 3;
@@ -159,13 +160,13 @@
             this.replaceRadioButton.AutoSize = true;
             this.replaceRadioButton.BackColor = System.Drawing.Color.Transparent;
             this.replaceRadioButton.ForeColor = System.Drawing.Color.White;
-            this.replaceRadioButton.Location = new System.Drawing.Point(198, 147);
+            this.replaceRadioButton.Location = new System.Drawing.Point(176, 151);
             this.replaceRadioButton.Name = "replaceRadioButton";
             this.replaceRadioButton.Size = new System.Drawing.Size(65, 17);
             this.replaceRadioButton.TabIndex = 4;
             this.replaceRadioButton.Text = "Replace";
             this.replaceRadioButton.UseVisualStyleBackColor = false;
-            this.replaceRadioButton.CheckedChanged += new System.EventHandler(this.replaceRadioButton_CheckedChanged);
+            //this.replaceRadioButton.CheckedChanged += new System.EventHandler(this.replaceRadioButton_CheckedChanged);
             // 
             // replaceableTextbox
             // 
@@ -175,8 +176,21 @@
             this.replaceableTextbox.Location = new System.Drawing.Point(63, 222);
             this.replaceableTextbox.MinimumSize = new System.Drawing.Size(2, 23);
             this.replaceableTextbox.Name = "replaceableTextbox";
-            this.replaceableTextbox.Size = new System.Drawing.Size(288, 23);
+            this.replaceableTextbox.Size = new System.Drawing.Size(288, 20);
             this.replaceableTextbox.TabIndex = 5;
+            // 
+            // removeNumbersRadioButton
+            // 
+            this.removeNumbersRadioButton.AutoSize = true;
+            this.removeNumbersRadioButton.BackColor = System.Drawing.Color.Transparent;
+            this.removeNumbersRadioButton.ForeColor = System.Drawing.Color.White;
+            this.removeNumbersRadioButton.Location = new System.Drawing.Point(239, 119);
+            this.removeNumbersRadioButton.Name = "removeNumbersRadioButton";
+            this.removeNumbersRadioButton.Size = new System.Drawing.Size(110, 17);
+            this.removeNumbersRadioButton.TabIndex = 4;
+            this.removeNumbersRadioButton.Text = "Remove Numbers";
+            this.removeNumbersRadioButton.UseVisualStyleBackColor = false;
+            this.removeNumbersRadioButton.CheckedChanged += new System.EventHandler(this.replaceRadioButton_CheckedChanged);
             // 
             // MainForm
             // 
@@ -190,6 +204,7 @@
             this.Controls.Add(this.selectFileButton);
             this.Controls.Add(this.renameRadioButton);
             this.Controls.Add(this.prependRadioButton);
+            this.Controls.Add(this.removeNumbersRadioButton);
             this.Controls.Add(this.replaceRadioButton);
             this.Controls.Add(this.changeExtensionRadioButton);
             this.Controls.Add(this.appendRadioButton);
@@ -221,6 +236,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.RadioButton replaceRadioButton;
         private System.Windows.Forms.TextBox replaceableTextbox;
+        private System.Windows.Forms.RadioButton removeNumbersRadioButton;
     }
 }
 
